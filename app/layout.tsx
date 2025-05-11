@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Orbitron ,Inter } from "next/font/google";
 import "./globals.css";
+import ThemeProvider from "./Provider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const orbitron = Orbitron({
+  variable: "--font-orbitron",
   subsets: ["latin"],
+  weight: ["400",'500','600', "700","800", "900"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -23,11 +26,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning >
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${orbitron.variable} ${inter.variable} antialiased`}
       >
+        <ThemeProvider  attribute="class"
+          defaultTheme="dark"
+          enableSystem={true}
+          storageKey="theme"
+          disableTransitionOnChange > 
         {children}
+        </ThemeProvider>
       </body>
     </html>
   );
