@@ -54,6 +54,9 @@ export const metadata: Metadata = {
       noimageindex: false,
     },
   },
+    verification: {
+    google: "_GTq0A5GV7IW1YOJWfbhONPfG2vXApsL70BzTzIbn8A", // ✅ This adds your Google Search Console tag
+  },
   openGraph: {
     title: "Journey London | Premium Fitness Experience with best gym at Alipurduar",
     description:
