@@ -13,16 +13,19 @@ import { ScrollSmoother } from "gsap/ScrollSmoother";
 
 function Hero() {
   gsap.registerPlugin(ScrollTrigger,ScrollSmoother);
-  const textAnimate = useRef<HTMLLIElement[]>([])
+const textAnimate = useRef<HTMLHeadingElement>(null);
+
 useEffect(() => {
+  if (textAnimate.current) {
     gsap.from(textAnimate.current, {
-      y: -100,
+      y: 400,
       opacity: 0,
-      // duration: 0.1, 
-      stagger: 0.3,
+      duration: 1,
+      ease: "power2.out",
     });
   }
-  , []);
+}, []);
+
   return (
     <div className=" bg-black relative  h-full w-full">
       {/* Background Image */}
@@ -32,8 +35,8 @@ useEffect(() => {
         className=" h-[100vh] max-sm:opacity-65 max-md:object-cover object-contain"
 
       />
-      <div className="absolute top-0 inset-0 flex flex-col  z-40 px-24 max-xl:px-10 max-sm:px-2 justify-center ">
-        <h1 className="text-[74px] max-lg:text-[60px]  max-md:text-5xl max-sm:text-4xl  leading-[1.1] uppercase  tracking-widest font-(family-name:--font-secondary)   w-[50%] max-xl:w-[70%] max-lg:w-[90%]  font-bold text-white mb-4">
+      <div  className="absolute top-0 inset-0 flex flex-col  z-40 px-24 max-xl:px-10 max-sm:px-2 justify-center ">
+        <h1 ref={textAnimate} className="text-[64px] max-lg:text-[60px]  max-md:text-5xl max-sm:text-4xl  leading-[1.1] uppercase  tracking-widest font-(family-name:--font-secondary)   w-[50%] max-xl:w-[70%] max-lg:w-[90%]  font-bold text-white mb-4">
         The only
 <span className=' text-primary-color'> impossible
 journey </span> is

@@ -1,21 +1,21 @@
-@import "tailwindcss";
+    @import "tailwindcss";
 
-@theme{
-    --font-primary: 'Inter', sans-serif;
-    --font-secondary: 'Orbitron', sans-serif;
-    --color-primary-color:#fff500;
-    --secondary-color:''
-}
-@layer components{
-    .para{
-        font-family: var(--font-primary);
-        font-size: 1.2rem;
-      
+    @theme{
+        --font-primary: 'Inter', sans-serif;
+        --font-secondary: 'Orbitron', sans-serif;
+        --color-primary-color:#fff500;
+        --secondary-color:''
     }
-    /* For text stroke */
-.text-outline {
-    -webkit-text-stroke: 2px white;
-    color: transparent;
-  }
-  
-}
+    @layer components{
+        .para{
+            font-family: var(--font-primary);
+            font-size: 1.2rem;
+        
+        }
+        /* For text stroke */
+    .text-outline {
+        -webkit-text-stroke: 2px white;
+        color: transparent;
+    }
+    
+    }

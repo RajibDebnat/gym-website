@@ -22,7 +22,7 @@ function Classes() {
       });
 
       tl.from(aboutRef.current, {
-        x: -90,
+        x: -70,
         opacity: 0,
       }).from(
         subHeadingRef.current,
@@ -52,24 +52,28 @@ function Classes() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-12 md:py-16 bg-black text-white px-4 sm:px-6 md:px-10 lg:px-20">
+    <section ref={sectionRef} className="py-12 relative md:py-16 bg-black text-white px-4 sm:px-6 md:px-10 lg:px-20">
       {/* Heading */}
       <div className="relative text-center font-bold mb-16">
         <h2
           ref={aboutRef}
-          className="text-5xl sm:text-6xl text-center lg:text-7xl xl:text-8xl opacity-20 font-[var(--font-secondary)] mb-4"
+          className="text-5xl sm:text-6xl text-center lg:text-7xl xl:text-8xl opacity-20  font-secondary mb-4"
         >
           Featured Classes
         </h2>
         <span
           ref={subHeadingRef}
-          className="absolute w-full z-30 text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-[var(--font-secondary)] left-1/2 translate-x-[-50%] -bottom-2 max-sm:bootom-2 "
+          className="absolute w-full z-30 text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-secondary left-1/2 translate-x-[-50%] -bottom-2 max-sm:bootom-2 "
         >
           Featured Classes
         </span>
       </div>
-
       {/* Grid Cards */}
+      <div className="relative">
+
+ <h2 className="text-outline absolute text-black z-20 text-[120px] md:text-[160px] tracking-tight opacity-75 font-(family-name:--font-secondary) font-bold left-0 max-sm:-top-12  -top-32 select-none">
+            03
+          </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-6">
         {classesData.map((classItem) => (
           <div
@@ -84,14 +88,15 @@ function Classes() {
               className="w-full h-60 sm:h-72 md:h-80 lg:h-96 object-cover max-sm:object-fit rounded-t-lg"
             />
             <div className="p-4 text-center">
-              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-2">{classItem.title}</h3>
-              <button className="px-4 py-2 sm:px-6 sm:py-2 bg-primary-color text-black font-bold font-[var(--font-secondary)] hover:bg-opacity-90 transition-colors duration-200 rounded">
+              <h3 className=" font-secondary  max-sm:text-sm sm:text-xl md:text-2xl  font-semibold text-white mb-2">{classItem.title}</h3>
+              <button className="px-4 py-2 sm:px-6 sm:py-2 bg-primary-color text-black font-bold  hover:bg-opacity-90 transition-colors duration-200 rounded">
                 Book Now
               </button>
             </div>
           </div>
         ))}
       </div>
+            </div>
     </section>
   );
 }

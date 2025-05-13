@@ -21,7 +21,7 @@ gsap.registerPlugin(ScrollTrigger);
         });
   
         tl.from(aboutRef.current, {
-          x: -90,
+          x: -70,
           opacity: 0,
         }).from(subHeadingRef.current, {
           x: 20,
@@ -36,8 +36,9 @@ gsap.registerPlugin(ScrollTrigger);
           stagger: 0.3,
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: "top 90%",
-            // end: "bottom 20%",
+            start: "top 50%",
+            end: "bottom 20%",
+            
             scrub: 2,
           },
         });
@@ -47,8 +48,8 @@ gsap.registerPlugin(ScrollTrigger);
       return () => ctx.revert();
     }, []);
   return (
-    <section className='relative'>
-          <div className='relative'>
+    <section className='relative font-[var(--font-secondary)]'>
+          <div className='relative max-sm:text-center'>
         <h2  ref={aboutRef} className='text-8xl max-lg:text-6xl max-md:text-5xl text-center font-bold opacity-20 font-(family-name:--font-secondary) mb-4'>
           Meet The Team
         </h2>

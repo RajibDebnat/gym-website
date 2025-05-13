@@ -6,13 +6,14 @@ import ScrollProgressWithSections from "@/Components/StatusBar";
 import Aboutus from "@/Components/Aboutus";
 import MeetheTeam from "@/Components/MeetTheTeam";
 import Classes from "@/Components/Classes";
-
+import Features from "@/Components/Features";
 import Cursor from "@/Components/Cursor";
+import Membership from "@/Components/Membership";
 export default function Home() {
 
   
   return (
-    <main className=" relative  overflow-x-clip       bg-black  ">
+    <main className=" relative   overflow-x-clip    bg-black  ">
     <Navbar />
     <Hero />
     <Aboutus />
@@ -22,6 +23,8 @@ export default function Home() {
     <div className="  h-[300px] w-[120%] bg-primary-color absolute -z-1 -left-52 -rotate-[7deg]"></div>
     </div>
     <Classes />
+    <Features />
+    <Membership />
     <ScrollProgressWithSections />
     <Cursor />  
     </main>
