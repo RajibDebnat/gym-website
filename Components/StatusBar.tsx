@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa'; // social icons
+import { FaFacebookF, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const ScrollProgressWithSections = () => {
   const [scroll, setScroll] = useState(0);
@@ -16,7 +16,6 @@ const ScrollProgressWithSections = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Determine active section
   const getSection = () => {
     if (scroll < 25) return '1';
     if (scroll < 50) return '2';
@@ -25,7 +24,7 @@ const ScrollProgressWithSections = () => {
   };
 
   return (
-    <div className=" max-md:hidden fixed right-10 top-1/2 -translate-y-1/2 flex flex-col items-center z-50">
+    <div className="max-md:hidden fixed right-10 top-1/2 -translate-y-1/2 flex flex-col items-center z-50">
       {/* Vertical Progress Line */}
       <div className="relative h-64 w-1 bg-gray-300">
         <div
@@ -39,9 +38,30 @@ const ScrollProgressWithSections = () => {
 
       {/* Social Icons */}
       <div className="flex flex-col items-center mt-6 space-y-4 text-white text-lg">
-        <a href="#"><FaFacebookF /></a>
-        <a href="#"><FaTwitter /></a>
-        <a href="#"><FaInstagram /></a>
+        <a
+          href="https://www.facebook.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+          <FaFacebookF />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/rajib-debnath-0715a6236/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <FaLinkedin />
+        </a>
+        <a
+          href="https://www.instagram.com/webzz.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <FaInstagram />
+        </a>
       </div>
     </div>
   );

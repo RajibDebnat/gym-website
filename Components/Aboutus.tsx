@@ -50,7 +50,7 @@ function Aboutus() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-black text-white py-16 px-4 md:px-16 relative">
+    <section id='whoweare' ref={sectionRef} className="bg-black text-white py-16 px-4 md:px-16 relative">
       <div className='relative max-sm:text-center'>
         <h2 ref={aboutRef} className='text-8xl max-lg:text-6xl max-md:text-5xl text-center font-bold opacity-20 font-(family-name:--font-secondary) mb-4'>
           WHO WE ARE

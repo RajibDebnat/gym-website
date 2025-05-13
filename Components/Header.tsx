@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import { navArray } from "../data";
 export default function Navbar() {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -41,16 +41,16 @@ export default function Navbar() {
 
         {/* Desktop nav links */}
         <ul className="hidden lg:flex gap-6 items-center text-white tracking-widest font-medium">
-          {["HOME", "WHO WE ARE", "MEET THE TEAM", "CLASSES", "MEMBERSHIP"].map(
-            (text, i) => (
+          {navArray.map(
+            (item, i) => (
               <li
-                key={text}
+                key={item.text}
                 
                 ref={(el) => {
                   if (el) navLinksRef.current[i] = el;
                 }}
               >
-                <Link href="#">{text}</Link>
+                <Link href={`#${item.link}`}>{item.text}</Link>
               </li>
             )
           )}
@@ -58,12 +58,11 @@ export default function Navbar() {
 
         {/* Contact button */}
         <div className="hidden lg:flex items-center gap-2">
-          <Link
-            href="#contact"
+          <a href="mailto:rajibfreelancing@gmail.com"
             className="bg-primary-color px-4 py-4 font-bold text-[16px] tracking-widest text-black"
           >
             Contact
-          </Link>
+          </a>
         </div>
 
         {/* Mobile menu toggle */}
@@ -79,27 +78,31 @@ export default function Navbar() {
         <div className="lg:hidden border-t  bg-balck-800">
           <ul className="flex flex-col gap-4 px-4 py-3 text-white  font-(family-name:--font-secondary) font-medium">
             <li>
-              <Link onClick={() => setIsOpen(false)} href="/">Home</Link>
+              <Link onClick={() => setIsOpen(false)} href="#">HOME</Link>
             </li>
             <li>
-              <Link onClick={() => setIsOpen(false)} href="/blog">Blog</Link>
+              <Link onClick={() => setIsOpen(false)} href="#whoweare">WHO WE ARE </Link>
             </li>
             <li>
-              <Link onClick={() => setIsOpen(false)} href="/travelpacages">Packages</Link>
+              <Link onClick={() => setIsOpen(false)} href="#classes">CLASSES</Link>
             </li> 
             <li>
-              <Link onClick={() => setIsOpen(false)} href="/car-rent">Car Rent</Link>
+              <Link onClick={() => setIsOpen(false)} href="#meettheteam">MEET THE TEAM</Link>
+            </li>
+            <li>
+              <Link onClick={() => setIsOpen(false)} href="#membership">MEMBERSHIP </Link>
             </li>
             <li className="flex items-center gap-2">
-              <span className="bg-blue-600 text-white px-3 py-1 rounded text-sm font-semibold">
+              <span className="bg-primary-color text-black px-3 py-1 rounded text-sm font-semibold">
                 24x7
               </span>
-              <Link
-                href="tel:09004545000"
-                className="text-blue-600 font-medium text-sm"
-              >
-                090 4545 0000
-              </Link>
+            <a
+  href="mailto:rajibfreelancing@gmail.com"
+  className=" tracking-wider font-medium text-sm"
+>
+  rajibfreelancing@gmail.com
+</a>
+
             </li>
           </ul>
         </div>

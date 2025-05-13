@@ -48,7 +48,7 @@ gsap.registerPlugin(ScrollTrigger);
       return () => ctx.revert();
     }, []);
   return (
-    <section className='relative font-[var(--font-secondary)]'>
+    <section id='meettheteam' className='relative font-secondary' ref={sectionRef}>
           <div className='relative max-sm:text-center'>
         <h2  ref={aboutRef} className='text-8xl max-lg:text-6xl max-md:text-5xl text-center font-bold opacity-20 font-(family-name:--font-secondary) mb-4'>
           Meet The Team

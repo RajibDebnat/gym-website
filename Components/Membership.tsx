@@ -73,7 +73,7 @@ function Membership() {
   }, []);
 
   return (
-    <section ref={sectionRef} className=" relative my-16 px-4">
+    <section id="membership" ref={sectionRef} className=" relative my-16 px-4">
       {/* Headings */}
       <div className="relative max-sm:text-center font-bold mb-16">
         <h2

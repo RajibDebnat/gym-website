@@ -3,6 +3,15 @@ import gymnastic from "./public/classes/gymnastic.png";
 import lifting from "./public/classes/lifting.png";
 import squat from "./public/classes/crouch.png";
 
+export const navArray =[
+
+  { text: "HOME", link: "#" },
+  { text: "WHO WE ARE", link: "whoweare" },
+  { text: "MEET THE TEAM", link: "meettheteam" },
+  { text: "CLASSES", link: "classes" },
+  { text: "MEMBERSHIP", link: "membership" },
+  
+]
 const classesData = [
   {
     id: 1,

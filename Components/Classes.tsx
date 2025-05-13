@@ -52,7 +52,7 @@ function Classes() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-12 relative md:py-16 bg-black text-white px-4 sm:px-6 md:px-10 lg:px-20">
+    <section id="classes" ref={sectionRef} className="py-12 relative md:py-16 bg-black text-white px-4 sm:px-6 md:px-10 lg:px-20">
       {/* Heading */}
       <div className="relative text-center font-bold mb-16">
         <h2
