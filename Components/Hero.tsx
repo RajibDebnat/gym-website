@@ -2,6 +2,7 @@
 import React, { useRef } from 'react'
 import heroImg from '../public/home/hero.png'
 import Image from 'next/image'
+import Link from 'next/link';
 import ScrollProgressWithSections from "./StatusBar";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -45,9 +46,12 @@ the one you
         </h1>
         <div>
 
+<Link href={'tel:+8597613182'} > 
         <button  className="bg-primary-color my-4 font-(family-name:--font-secondary)   text-black px-16 py-4  font-semibold hover:opacity-90 cursor-pointer transition">
+
           Get Started
         </button>
+        </Link>
         </div>
       </div>
 

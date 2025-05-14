@@ -58,11 +58,11 @@ export default function Navbar() {
 
         {/* Contact button */}
         <div className="hidden lg:flex items-center gap-2">
-          <a href="mailto:rajibfreelancing@gmail.com"
+          <Link href="mailto:rajibfreelancing@gmail.com"
             className="bg-primary-color px-4 py-4 font-bold text-[16px] tracking-widest text-black"
           >
             Contact
-          </a>
+          </Link>
         </div>
 
         {/* Mobile menu toggle */}

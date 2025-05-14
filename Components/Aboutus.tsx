@@ -1,7 +1,7 @@
-'use client'
-import React, { useEffect, useRef } from 'react'
+'use client';
+import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import aboutImg from '../public/others/whoweare.jpg'
+import aboutImg from '../public/others/whoweare.jpg';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -17,7 +17,7 @@ function Aboutus() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 70%",
+          start: 'top 70%',
           scrub: 2,
         },
       });
@@ -25,37 +25,36 @@ function Aboutus() {
       tl.from(aboutRef.current, {
         x: -70,
         opacity: 0,
-      }).from(subHeadingRef.current, {
-        x: 20,
-        opacity: 0,
-      }, "-=0.5");
-
-      const fadeTexts = gsap.utils.toArray(".fade-text");
-      gsap.from(fadeTexts, {
-        y: 50,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.3,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 50%",
-          end: "bottom 20%",
-          scrub: 5,
+      }).from(
+        subHeadingRef.current,
+        {
+          x: 20,
+          opacity: 0,
         },
-      });
-      
+        '-=0.5'
+      );
     }, sectionRef);
 
     return () => ctx.revert();
   }, []);
 
   return (
-    <section id='whoweare' ref={sectionRef} className="bg-black text-white py-16 px-4 md:px-16 relative">
-      <div className='relative max-sm:text-center'>
-        <h2 ref={aboutRef} className='text-8xl max-lg:text-6xl max-md:text-5xl text-center font-bold opacity-20 font-(family-name:--font-secondary) mb-4'>
+    <section
+      id="whoweare"
+      ref={sectionRef}
+      className="bg-black text-white py-16 px-4 md:px-16 relative"
+    >
+      <div className="relative max-sm:text-center">
+        <h2
+          ref={aboutRef}
+          className="text-8xl max-lg:text-6xl max-md:text-5xl text-center font-bold opacity-20 font-(family-name:--font-secondary) mb-4"
+        >
           WHO WE ARE
         </h2>
-        <span ref={subHeadingRef} className='absolute z-30 max-lg:text-4xl max-md:text-2xl -bottom-8 left-[50%] text-6xl font-bold font-(family-name:--font-secondary) translate-x-[-50%]'>
+        <span
+          ref={subHeadingRef}
+          className="absolute z-30 max-lg:text-4xl max-md:text-2xl -bottom-8 left-[50%] text-6xl font-bold font-(family-name:--font-secondary) translate-x-[-50%]"
+        >
           WHO WE ARE
         </span>
       </div>
@@ -77,13 +76,13 @@ function Aboutus() {
 
         {/* Right side */}
         <div className="w-full md:w-1/2 z-10">
-          <p className="fade-text text-gray-300 mb-4 text-lg font-(family-name:--font-primary)">
+          <p className="text-gray-300 mb-4 text-lg font-(family-name:--font-primary)">
             At Journey London we believe CrossFitters come in all shapes and sizes, we are all on a journey towards our own personal best health and fitness levels. A journey that makes us better as athletes, friends and people.
           </p>
-          <p className="fade-text text-gray-300 mb-4 text-lg font-(family-name:--font-primary)">
+          <p className="text-gray-300 mb-4 text-lg font-(family-name:--font-primary)">
             Our facility is unlike any other gym you’ve been to before. We pride ourselves not only in providing world class CrossFit training, but we also believe in creating a motivating and dynamic environment. We are the community dedicated to your human evolution, one workout at a time.
           </p>
-          <p className="fade-text text-gray-300 text-lg font-(family-name:--font-primary)">
+          <p className="text-gray-300 text-lg font-(family-name:--font-primary)">
             Come in for a free trial class! Lose some body fat, gain some friends, and get fit for life!
           </p>
         </div>
