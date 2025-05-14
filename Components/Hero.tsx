@@ -46,7 +46,7 @@ the one you
         </h1>
         <div>
 
-<Link href={'tel:+8597613182'} > 
+<Link href={'tel:+85*******2'} > 
         <button  className="bg-primary-color my-4 font-(family-name:--font-secondary)   text-black px-16 py-4  font-semibold hover:opacity-90 cursor-pointer transition">
 
           Get Started

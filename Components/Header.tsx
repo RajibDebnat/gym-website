@@ -96,12 +96,12 @@ export default function Navbar() {
               <span className="bg-primary-color text-black px-3 py-1 rounded text-sm font-semibold">
                 24x7
               </span>
-            <a
-  href="mailto:rajibfreelancing@gmail.com"
+            <Link
+  href="mailto:example@gmail.com"
   className=" tracking-wider font-medium text-sm"
 >
-  rajibfreelancing@gmail.com
-</a>
+  Your Email
+</Link>
 
             </li>
           </ul>

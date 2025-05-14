@@ -16,9 +16,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Journey London | Alipurduar Best Gym",
+  title: "Aliurduar Best Gym || Journey London",
   description:
-    "Join Journey London for world-class fitness classes, expert trainers, and a vibrant community. Your transformation begins here. Journey London is Alipurduar's best gym.",
+    "At Alipurduar Join Journey London for world-class fitness classes, expert trainers, and a vibrant community.Journey London is Alipurduar's best gym.",
   keywords: [
     "Journey London",
     "Alipurduar best gym",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "fitness",
     "Strength Training",
     "Gym Membership",
-    "Wellness Studio",
+    "Alipurduar best gym",
     "Alipurduar gym",
     "gym near me",
     "fitness classes",

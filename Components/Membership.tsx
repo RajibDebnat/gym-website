@@ -100,7 +100,7 @@ function Membership() {
                 ))}
               </ul>
               <Link
-                href="https://wa.me/8597613182?text=Hi%20I%20want%20to%20know%20more%20about%20your%20gym"
+                href="https://wa.me/yourwhat'sapp number?text=Hi%20I%20want%20to%20know%20more%20about%20your%20gym"
                 className="flex justify-center"
               >
                 <button className="mt-6 px-6 py-2 text-black font-extrabold bg-[#fff500]">
