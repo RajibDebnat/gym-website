@@ -12,16 +12,18 @@ function Aboutus() {
   const aboutRef = useRef<HTMLHeadingElement>(null);
   const subHeadingRef = useRef<HTMLSpanElement>(null);
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 70%',
-          scrub: 2,
-        },
-      });
+ useEffect(() => {
+  const ctx = gsap.context(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top 70%',
+        scrub: 2,
+      },
+    });
 
+    // Animate aboutRef
+    if (aboutRef.current) {
       tl.from(aboutRef.current, {
         x: -70,
         opacity: 0,
@@ -31,12 +33,25 @@ function Aboutus() {
           x: 20,
           opacity: 0,
         },
-        '-=0.5'
-      );
-    }, sectionRef);
+        "-=0.5"
+      );;
+    }
 
-    return () => ctx.revert();
-  }, []);
+    // Animate paragraph class
+    tl.from(".para", {
+      y: 30,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.3,
+    });
+
+    // Animate subheading
+    
+  }, sectionRef);
+
+  return () => ctx.revert();
+}, []);
+
 
   return (
     <section
@@ -76,13 +91,13 @@ function Aboutus() {
 
         {/* Right side */}
         <div className="w-full md:w-1/2 z-10">
-          <p className="text-gray-300 mb-4 text-lg font-(family-name:--font-primary)">
+          <p className=" para text-gray-300 mb-4 text-lg font-(family-name:--font-primary)">
             At Journey London we believe CrossFitters come in all shapes and sizes, we are all on a journey towards our own personal best health and fitness levels. A journey that makes us better as athletes, friends and people.
           </p>
-          <p className="text-gray-300 mb-4 text-lg font-(family-name:--font-primary)">
+          <p className="para text-gray-300 mb-4 text-lg font-(family-name:--font-primary)">
             Our facility is unlike any other gym you’ve been to before. We pride ourselves not only in providing world class CrossFit training, but we also believe in creating a motivating and dynamic environment. We are the community dedicated to your human evolution, one workout at a time.
           </p>
-          <p className="text-gray-300 text-lg font-(family-name:--font-primary)">
+          <p className="para text-gray-300 text-lg font-(family-name:--font-primary)">
             Come in for a free trial class! Lose some body fat, gain some friends, and get fit for life!
           </p>
         </div>

@@ -72,6 +72,7 @@ function MeetTheTeamGrid() {
               className="w-full h-auto object-cover"
               width={300}
               height={300}
+              
             />
             <div className="absolute inset-0 bg-primary-color bg-opacity-40 opacity-0 group-active:opacity-80 group-hover:opacity-80 transition-opacity duration-300 flex items-center justify-center">
               <p className="font-bold text-slate-800 text-3xl font-[--font-secondary]">

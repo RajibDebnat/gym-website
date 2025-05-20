@@ -9,6 +9,7 @@ import Classes from "@/Components/Classes";
 import Features from "@/Components/Features";
 import Cursor from "@/Components/Cursor";
 import Membership from "@/Components/Membership";
+import BmiCalculator from "@/Components/BmiCalculator";
 import Footer from "@/Components/Footer";
 export default function Home() {
 
@@ -25,8 +26,10 @@ export default function Home() {
     </div>
     <Classes />
     <Features />
+    <BmiCalculator />
     <Membership />
     <Footer />
+
     <ScrollProgressWithSections />
     <Cursor />  
     </main>
