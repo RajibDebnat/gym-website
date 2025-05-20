@@ -49,6 +49,7 @@ function Footer() {
               Submit
             </button>
           </form>
+          <p className=" mt-4">created by <Link href="https://www.rajibdev.site" className="text-black font-bold">Rajib Debnath</Link></p>
         </div>
       </div>
     </footer>
